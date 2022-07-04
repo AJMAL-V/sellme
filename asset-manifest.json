@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/sellme/static/css/main.f5e2f700.css",
+    "main.js": "/sellme/static/js/main.ec1c64e3.js",
+    "static/media/olx-logo.png": "/sellme/static/media/olx-logo.b3f099a2fe7978c70944.png",
+    "index.html": "/sellme/index.html",
+    "main.f5e2f700.css.map": "/sellme/static/css/main.f5e2f700.css.map",
+    "main.ec1c64e3.js.map": "/sellme/static/js/main.ec1c64e3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f5e2f700.css",
+    "static/js/main.ec1c64e3.js"
+  ]
+}
