@@ -14,18 +14,21 @@ const Create = () => {
   const {user}=useContext(AuthContext);
   const navigate=useNavigate();
   const date=new Date();
+  const reset=()=>{
+    setname("");
+    setcategory("");
+    setprice("");
+    setimage(null);
+  }
   const home=()=>{ navigate('/sellme')}
   const handelsubmit=()=>{
+    if(name || category || price =="" ){
+      alert("please enter all the details ")
+    }
+   
     console.log("hello");
     Storage.ref(`/Img/${image.name}`).put(image).then(({ref})=>{
       ref.getDownloadURL().then((url)=>{
-        console.log(url);
-        // firebase.firestore().collection('users').add({
-        //   id:result.user._delegate.uid,
-        //   userName:userName,
-        //   phone:phone
-        // })
-
         firebase.firestore().collection('products').add({
           name,
           category,
@@ -33,7 +36,10 @@ const Create = () => {
           url,
           userId:user.uid ,
           createdAt:date.toDateString()
+
         })
+        alert("product added");
+        
       })
     })
    
@@ -93,8 +99,11 @@ const Create = () => {
             }}
             type="file" />
             <br />
+            <br />
+
+            <button className='reset' onClick={reset}>Reset</button>
             <button onClick={handelsubmit} className="uploadBtn">upload and Submit</button>
-          
+             
           <button className="uploadBtn" onClick={ home}>home</button>
         </div>
       </card>

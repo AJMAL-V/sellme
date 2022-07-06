@@ -29,4 +29,18 @@
     color: #002f34;
     border: 2px solid #002f34;
   }
+  .reset:hover{
+    background-color: white;
+    color: #002f34;
+    border: 2px solid #002f34;
+  }
+  .reset{
+    margin-top: 30px;
+    width: 30%;
+    height: 25px;
+    /* border-color: transparent; */
+    background-color: #002f34;
+    color: whitesmoke;
+    font-weight: 900;
+  }
   
